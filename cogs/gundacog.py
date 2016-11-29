@@ -17,7 +17,7 @@ class Gundacog:
 
     @commands.command(pass_context = True)
     async def myname(self,ctx):
-        """This does stuff!"""
+        """Gives the name of the user"""
 
         #Your code will go here
         user = ctx.message.author
@@ -25,13 +25,14 @@ class Gundacog:
 
     @commands.command(pass_context = True)
     async def pick(self,ctx):
-        """This does stuff!"""
+        """Picks a random user from the channel"""
 
         #Your code will go here
         server = ctx.message.server
         people = []
         for x in server.members:
-        	people.append(x)
+            if x.status == discord.Status.online:
+                people.append(x)
         await self.bot.say(randchoice(people))
 
 def setup(bot):

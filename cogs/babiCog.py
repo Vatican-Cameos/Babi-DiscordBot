@@ -43,10 +43,13 @@ class BabiCog:
         botUser  = (self.bot.user.name)
 
         greetingsList = ["Hi kind sir", "How you doing? " ,"What's up "+ message.author.name, "Hey! "+ message.author.name, "Hola, good day kind sir. " , "Enappa rajkumar ? oota ayta"]
+        byeList = ["Bye", "See you", "Take care", "Good night"]
         if message.content.startswith("hi"):
             await self.bot.send_message(message.channel , random.choice(greetingsList))
         elif ( botUser in message.content or  str(botUserMention) in message.content or botUser.lower() in message.content or message.content.startswith(botUser)):
             await self.bot.send_message(message.channel, random.choice(babiRespondsList))
+        elif message.content.startswitch("bye"):
+        	await self.bot.send_message(message.channel , random.choice(byeList))    
 
 def setup(bot):
     n = BabiCog(bot)

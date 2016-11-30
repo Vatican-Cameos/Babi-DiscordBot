@@ -13,7 +13,7 @@ class Gundacog:
         """This does stuff!"""
 
         #Your code will go here
-        await self.bot.say("I can do stuff!!")
+        await self.bot.say("I can do stuff!!!")
 
     @commands.command(pass_context = True)
     async def myname(self,ctx):

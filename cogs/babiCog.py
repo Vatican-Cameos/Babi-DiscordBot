@@ -47,7 +47,7 @@ class BabiCog:
         if botUser != message.author.name:
             if message.content.startswith("hi"):
                 await self.bot.send_message(message.channel , random.choice(greetingsList))
-            elif ( botUser in message.content or  str(botUserMention) in message.content or botUser.lower() in message.content or message.content.startswith(botUser)):
+            elif ( botUser in message.content or  str(botUserMention) in message.content or botUser.lower() in message.content or botUser.upper() in message.content or message.content.startswith(botUser)):
                 await self.bot.send_message(message.channel, random.choice(babiRespondsList))
             elif message.content.startswith("bye"):
                 await self.bot.send_message(message.channel , random.choice(byeList)) 

@@ -17,7 +17,7 @@ class Gundacog:
 
     @commands.command(pass_context = True)
     async def myname(self,ctx):
-        """Gives the name of the user"""
+        """Gives your username"""
 
         #Your code will go here
         user = ctx.message.author
@@ -25,7 +25,7 @@ class Gundacog:
 
     @commands.command(pass_context = True)
     async def pick(self,ctx):
-        """Picks a random user from the channel"""
+        """Picks a random user from the channel who are online"""
 
         #Your code will go here
         server = ctx.message.server

@@ -1,7 +1,9 @@
 import discord
 from discord.ext import commands
 import random
+
 babiRespondsList = ["What?", "What do you want?" ,"yes?" , "Who called me?", "What did you say?"]
+
 class BabiCog:
     """My custom cog that does stuff!"""
 
@@ -36,7 +38,15 @@ class BabiCog:
         """Analyzes the behavior of each user and a uses a complex algorithm which mentions the coolest person of the group"""
        	
         await self.bot.say(":point_up_2::skin-tone-3: ")
+    
+    @commands.command(pass_context=True)
+    async def whoisonline(self,ctx):
+        """Returns members who are online"""
 
+        server = ctx.message.server
+        for member in server.members:
+            if member.status == discord.Status.online or member.status == discord.Status.idle:
+                await self.bot.say(member)
 
     async def check_listener(self, message):
         botUserMention = (self.bot.user.mention)

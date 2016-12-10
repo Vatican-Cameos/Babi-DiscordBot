@@ -81,7 +81,7 @@ class BabiCog:
         if(str(old_status) == "idle"):
             if(str(new_status) == "online"):
                 await self.bot.send_message(channel,"Back in action are we ? %s ?"%after_member.name)
-        if(str(old_status) == "invisible"):
+        if(str(old_status) == "offline"):
             if(str(new_status) == "online"):
                 await self.bot.send_message(channel,"Welcome to Developers %s. Hope you enjoy your stay."%after_member.name)
     

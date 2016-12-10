@@ -76,11 +76,12 @@ class BabiCog:
                 await self.bot.send_message(message.channel , random.choice(byeList)) 
 
     async def on_member_update_listener(self, before_member, after_member):
-        print (str(old_status) + str(new_status))
+        old_status = before_member.status
+        new_status = after_member.status
         if(str(old_status) == "idle"):
             if(str(new_status) == "online"):
                 await self.bot.send_message(channel,"Back in action are we ? %s ?"%after_member.name)
-        if(str(old_status) == "offline"):
+        if(str(old_status) == "invisible"):
             if(str(new_status) == "online"):
                 await self.bot.send_message(channel,"Welcome to Developers %s. Hope you enjoy your stay."%after_member.name)
     

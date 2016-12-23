@@ -5,10 +5,10 @@ import asyncio
 #general : 252122196707770369
 #testing : 252375277076873216
 
-channel_id = '252375277076873216'
+#channel_id = #ChannelID
 
 #change it to your bot token
-bot_token = 'MjUyMzY4MTcyNjIyMTUxNjgw.CyW0aQ.wVXSbgXjxEz-XY7_N_5-N2dCFvc'
+#bot_token = #token here;
 
 channel = discord.Object(channel_id)
 client = discord.Client()

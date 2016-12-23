@@ -2,8 +2,7 @@ import discord
 import asyncio
 
 #change id accordingly for other channels
-#general : 252122196707770369
-#testing : 252375277076873216
+
 
 #channel_id = #ChannelID
 

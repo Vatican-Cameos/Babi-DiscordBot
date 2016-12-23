@@ -4,7 +4,7 @@ from .utils.dataIO import dataIO
 import random
 
 babiRespondsList = ["What?", "What do you want?" ,"yes?" , "Who called me?", "What did you say?"]
-channel_id = '252375277076873216'
+#channel_id uncomment this.
 channel = discord.Object(channel_id)
 
 class BabiCog:
